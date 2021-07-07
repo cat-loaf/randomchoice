@@ -13,6 +13,8 @@ function App() {
   return (
     <>
       <header className="App-header"  >
+        <title>Choice Picker by Granth J.</title>
+        <link rel="shortcut icon" type="image/png" href="https://static.thenounproject.com/png/1940210-200.png"/>
           {/*style={{"--accent-color":"red"}}*/}
       </header>
       <div className="head bod glow rounded-border" style={{"--radius":"1em"}}>        
