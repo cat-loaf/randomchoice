@@ -1,38 +1,203 @@
-.App {
-  text-align: center;
+:root {
+  --p-bg:rgb(24,24,24);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  font-family:Consolas, monospace;
+  font-size:1.2rem;
+  margin: 0;
+  padding: 0;
+  background-color: var(--p-bg);
+  color:white;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+bodysub {  font-family:Consolas, monospace;
+  font-size:1.2rem;
+  margin: 0;
+  padding: 0;
+  background-color: var(--p-bg);
+  color:white;}
+
+div.test {
+ border: 0.2em solid red;
+}
+div.bod {
+--accent-color:white;
+--bg-col: var(--p-background);
+margin:1em;
+padding:1em;
+ border: 0.2em solid var(--accent-color);
+ background-color: var(--bg-col);
+ transition: all ease-in-out 250ms;
+}
+div.glow {
+  --accent-color:white;
+  box-shadow: 0px 0px 20px var(--accent-color);
+}
+div.box-animate:hover {
+  animation: box-color-change 1.4s infinite ease-in-out ;  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (hover: none) {
+  nav li {
+      display: inline;
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+      padding-top: 1.2em;
+      position:relative;
+      font-size:0.45em;
+  }
+  .logo {
+      width:2em;
+      float: left;
+      height: auto;
+      box-shadow: 0px 0px 20px rgb(255, 255, 255);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+  background:rgb(66, 66, 102);
+  position:fixed;
+  width:100%;
+  z-index:9999;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  float: left;
+  height: auto;
+  box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+
+imgholder {
+  float: left;
+  height: auto;
+  padding: 0.8em;
+  padding-left:1em;    
+}
+.logo:hover {
+  animation: box-color-change 1.4s infinite ease-in-out ;
+}
+
+
+.rounded {
+  border-radius: 50%;    
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin:0;
+  padding: 0;
+  padding-right: 1.5em;
+  list-style:none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  padding-top: 1.2em;
+
+  position:relative;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 
+      0px 0px 20px rgb(255, 255, 255)
+}
+
+nav a:hover, nav a:focus {
+  animation: color-change 1.4s infinite ease-in-out ;    
+}
+
+.textblur {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-shadow: 
+      0px 0px 20px rgb(255, 255, 255)
+}
+
+subtitle {
+  font-size: .5em;
+  line-Height: 0.6em;
+}
+.body-element {
+    
+    margin-top:1em;
+    margin-right:1em; 
+    font-size:1em;
+}
+items-list > ul  {padding:0; list-style:none; }
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalised::first-letter, .capitalized::first-letter {
+  text-transform: uppercase;
+}
+.rounded-border { --radius:40%; border-radius:var(--radius); }
+.no-pad {
+  padding:0px;
+}
+.list > ul {
+  list-style:none;
+}
+.list > ul > li::before {
+  content: "\2022";  
+  color: rgb(255, 255, 255); 
+  font-weight: bold; 
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em; 
+}
+.no-margin { margin:0px; }
+
+nav a::after {
+  content: '';
+  display: block;
+  height: 0.3em;
+  background-color: rgb(255, 255, 255);
+  top:0;
+  width: 0%;
+  box-shadow:0px 0px 20px rgb(255, 255, 255);
+  transition: all ease-in-out 250ms;
+}
+nav a:hover::after {
+  animation: box-color-change 1.4s forwards ease-in-out;
+  width: 100%;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: inherit, monospace;
+  padding: 0 3px;
+  color:rgb(29, 29, 29);
+  font-weight:500;
+}
+
+@keyframes color-change {
+  0% { text-shadow:0px 0px 20px rgb(255, 255, 255) }
+  50% { text-shadow:0px 0px 5px rgb(255, 255, 255) }
+  100% { text-shadow:0px 0px 20px rgb(255, 255, 255) }
+}
+
+@keyframes box-color-change {
+  0% { box-shadow:0px 0px 20px rgb(255, 255, 255) }
+  50% { box-shadow:0px 0px 5px rgb(255, 255, 255) }
+  100% { box-shadow:0px 0px 20px rgb(255, 255, 255) }
 }
