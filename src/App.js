@@ -24,7 +24,7 @@ function App() {
               fontSize: "2em",
               })}>
           choice picker<br />
-          <subtitle ><hr />made by catloaf (granth j.)</subtitle>
+          <subtitle ><hr />made by cat loaf (gj.)</subtitle>
         </p>
       </div>
       <hr style={{marginLeft:"1em", marginRight:"1em"}}/>
